@@ -48,4 +48,4 @@ jobs:
         context: .
         push: true
         tags: |
-          ${{ secrets.DOCKERHUB_USERNAME }}/immortalwrt-mini:${{ env.IMAGE_TAG }}
+          ${{ secrets.DOCKERHUB_USERNAME }}/immortalwrt:${{ env.IMAGE_TAG }}
