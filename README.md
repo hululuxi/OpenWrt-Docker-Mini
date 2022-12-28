@@ -17,19 +17,6 @@ DockerHub: <https://hub.docker.com/r/sulinggg/openwrt-mini>
 
 - 本项目提供纯净版的 Docker OpenWrt 镜像，并预配置自建软件源，使用者可以在 OpenWrt 中通过 opkg 命令安装需要的软件包。
 
-## 支持设备及镜像版本
-
-对于国内用户，为提高镜像拉取体验，可以考虑拉取存放于阿里云镜像仓库的镜像，镜像名称及标签如下表所示:
-
-|  支持设备/平台  |          DockerHub           |                    阿里云镜像仓库 (上海)                     |
-| :-------------: | :--------------------------: | :----------------------------------------------------------: |
-|    树莓派 2B    |  sulinggg/openwrt-mini:rpi2  |  registry.cn-shanghai.aliyuncs.com/suling/openwrt-mini:rpi2  |
-| 树莓派 3B / 3B+ |  sulinggg/openwrt-mini:rpi3  |  registry.cn-shanghai.aliyuncs.com/suling/openwrt-mini:rpi3  |
-|    树莓派 4B    |  sulinggg/openwrt-mini:rpi4  |  registry.cn-shanghai.aliyuncs.com/suling/openwrt-mini:rpi4  |
-|       arm       |  sulinggg/openwrt-mini:arm   |  registry.cn-shanghai.aliyuncs.com/suling/openwrt-mini:arm   |
-|      arm64      | sulinggg/openwrt-mini:arm64  | registry.cn-shanghai.aliyuncs.com/suling/openwrt-mini:arm64  |
-|     x86_64      | sulinggg/openwrt-mini:x86_64 | registry.cn-shanghai.aliyuncs.com/suling/openwrt-mini:x86_64 |
-
 ## 注意事项
 
 - 本项目使用文档同 [OpenWrt-Mini](https://github.com/SuLingGG/OpenWrt-Mini) 项目的使用文档，在此不再赘述。
