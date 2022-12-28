@@ -10,10 +10,11 @@ env:
   PREFIX_URL: https://downloads.immortalwrt.org/releases/21.02.3/targets
   TARGET: x86
   SUBTARGET: 64
-  DEVICE: x86-64-generic
+  DEVICE: x86-64
   PLATFORM: x86_64
   ARCH: linux/amd64
   IMAGE_TAG: x86_64
+  BRANCHES: 21.02.3
 
 jobs:
   Publish:
@@ -37,7 +38,7 @@ jobs:
 
     - name: Download RootFS Archive
       run: |
-        wget -q $PREFIX_URL/$TARGET/$SUBTARGET/rootfs.tar.gz
+        wget -q $PREFIX_URL/$TARGET/$SUBTARGET/immortalwrt-$BRANCHES-$DEVICE-rootfs.tar.gz
 
     - name: Build & Push Multiarch Image
       uses: docker/build-push-action@v3
