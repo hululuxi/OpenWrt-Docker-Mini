@@ -38,7 +38,7 @@ jobs:
     - name: Download RootFS Archive
       run: |
         wget -q $PREFIX_URL/$TARGET/$SUBTARGET/immortalwrt-$DEVICE-rootfs.tar.gz
-        wget -q https://raw.githubusercontent.com/immortalwrt/immortalwrt/openwrt-21.02/package/emortal/autocore/files/x86/index.htm -O ./data/etc/index.htm
+        wget -q https://raw.githubusercontent.com/immortalwrt/immortalwrt/openwrt-18.06-k5.4/package/emortal/autocore/files/arm/index.htm -O ./data/etc/index.htm
 
     - name: Build & Push Multiarch Image
       uses: docker/build-push-action@v3
