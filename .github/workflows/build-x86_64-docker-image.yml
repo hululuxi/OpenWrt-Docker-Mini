@@ -7,7 +7,7 @@ on:
     - cron: 0 16 * * 0,1,3,5
 
 env:
-  PREFIX_URL: https://openwrt.cc/releases/targets
+  PREFIX_URL: https://downloads.immortalwrt.org/releases/21.02.3/targets
   TARGET: x86
   SUBTARGET: 64
   DEVICE: x86-64-generic
@@ -37,8 +37,7 @@ jobs:
 
     - name: Download RootFS Archive
       run: |
-        wget -q $PREFIX_URL/$TARGET/$SUBTARGET/immortalwrt-$DEVICE-rootfs.tar.gz
-        wget -q https://raw.githubusercontent.com/immortalwrt/immortalwrt/openwrt-21.02/package/emortal/autocore/files/x86/autocore -O ./data/etc/autocore
+        wget -q $PREFIX_URL/$TARGET/$SUBTARGET/rootfs.tar.gz
 
     - name: Build & Push Multiarch Image
       uses: docker/build-push-action@v3
