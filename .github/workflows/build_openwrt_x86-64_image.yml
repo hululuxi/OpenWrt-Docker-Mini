@@ -14,7 +14,7 @@ env:
   PLATFORM: x86_64
   ARCH: linux/amd64
   IMAGE_TAG: x86_64
-  BRANCHES: 21.02.3
+  BRANCHES: 22.03.2
 
 jobs:
   Publish:
