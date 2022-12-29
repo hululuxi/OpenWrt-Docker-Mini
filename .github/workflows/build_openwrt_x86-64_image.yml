@@ -10,7 +10,7 @@ env:
   PREFIX_URL: https://downloads.openwrt.org/releases/22.03.2/targets
   TARGET: x86
   SUBTARGET: 64
-  DEVICE: x86-64-generic
+  DEVICE: x86-64
   PLATFORM: x86_64
   ARCH: linux/amd64
   IMAGE_TAG: x86_64
@@ -38,7 +38,7 @@ jobs:
 
     - name: Download RootFS Archive
       run: |
-        wget -q $PREFIX_URL/$TARGET/$SUBTARGET/openwrt-22.03.2-$BRANCHES-$DEVICE-ext4-rootfs.img.gz
+        wget -q $PREFIX_URL/$TARGET/$SUBTARGET/openwrt-$BRANCHES-$DEVICE-rootfs.tar.gz
 
     - name: Build & Push Multiarch Image
       uses: docker/build-push-action@v3
