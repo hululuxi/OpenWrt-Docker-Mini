@@ -18,7 +18,7 @@ on:
       INPUT_TARGET:
         description: "Target to build x86-64"
         required: false
-        default: "x86"
+        default: "x86_64/x86/64/linux-amd64/amd64"
   schedule:
     - cron: 0 0 * * *
 
