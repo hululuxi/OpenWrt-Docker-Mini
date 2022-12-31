@@ -123,7 +123,7 @@ jobs:
       - name: Combine feeds.conf
         run: |
           cd openwrt-imagebuilder-$BRANCHES-$DEVICE_TARGET-$DEVICE_SUBTARGET.Linux-x86_64
-          echo "$GITHUB_WORKSPACE/config/feeds.config" >> feeds.conf
+          echo $GITHUB_WORKSPACE/config/feeds.config >> feeds.conf.default
         
       - name: Update & Install feeds
         run: |
