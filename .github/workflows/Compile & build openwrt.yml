@@ -128,6 +128,7 @@ jobs:
       - name: Update & Install feeds
         run: |
           cd openwrt-imagebuilder-$BRANCHES-$DEVICE_TARGET-$DEVICE_SUBTARGET.Linux-x86_64
+          make distclean
           ./scripts/feeds update -a
           ./scripts/feeds install -a
 
