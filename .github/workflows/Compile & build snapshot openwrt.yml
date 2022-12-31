@@ -118,6 +118,7 @@ jobs:
             s/DEVICE_TARGET/$DEVICE_TARGET/g; \
             s/KERNEL_VERSION/$KERNEL_VERSION/g; \
             s/DEVICE_PLATFORM/$DEVICE_PLATFORM/g" $GITHUB_WORKSPACE/data/etc/opkg/distfeeds.conf
+          echo $(cat $GITHUB_WORKSPACE/remakefile) > Makefile
             
       #- name: Combine feeds.conf
       #  run: |
