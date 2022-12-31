@@ -126,7 +126,7 @@ jobs:
           echo "$GITHUB_WORKSPACE/config/feeds.config" >> ./feeds.conf.default
         
       - name: Update & Install feeds
-        working-directory: ./openwrt
+        working-directory: ./openwrt-imagebuilder-$BRANCHES-$DEVICE_TARGET-$DEVICE_SUBTARGET.Linux-x86_64
         run: |
           ./scripts/feeds update -a
 
