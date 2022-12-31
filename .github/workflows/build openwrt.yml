@@ -113,12 +113,12 @@ jobs:
             s/DEVICE_TARGET/$DEVICE_TARGET/g; \
             s/DEVICE_PLATFORM/$DEVICE_PLATFORM/g" repositories.conf
           cp -rf $GITHUB_WORKSPACE/data/etc .
-          chmod +x data/etc/rc.local
+          chmod +x $GITHUB_WORKSPACE/data/etc/rc.local
           export KERNEL_VERSION="$(ls packages | grep kernel | awk -F '_' '{print $2}')"
           sed -i "s/DEVICE_SUBTARGET/$DEVICE_SUBTARGET/g; \
             s/DEVICE_TARGET/$DEVICE_TARGET/g; \
             s/KERNEL_VERSION/$KERNEL_VERSION/g; \
-            s/DEVICE_PLATFORM/$DEVICE_PLATFORM/g" data/etc/opkg/distfeeds.conf
+            s/DEVICE_PLATFORM/$DEVICE_PLATFORM/g" $GITHUB_WORKSPACE/data/etc/opkg/distfeeds.conf
 
       - name: Build Mini RootFS
         run: |
