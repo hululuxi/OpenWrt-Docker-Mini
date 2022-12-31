@@ -9,8 +9,8 @@
 name: X86-64 Docker Images
 
 env:
-  BRANCHES: 21.02.5
-  PREFIX_URL: https://downloads.openwrt.org/releases/21.02.5/targets
+  BRANCHES: 22.03.2
+  PREFIX_URL: https://downloads.openwrt.org/releases/22.03.2/targets
 
 on:
   workflow_dispatch:
