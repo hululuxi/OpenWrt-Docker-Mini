@@ -129,7 +129,7 @@ jobs:
         run: |
           cd openwrt-imagebuilder-$BRANCHES-$DEVICE_TARGET-$DEVICE_SUBTARGET.Linux-x86_64
           ./scripts/feeds update -a
-          ./scripts/feeds install -a
+          ./scripts/feeds install -a -p packages luci routing telephony
 
       - name: Build Mini RootFS
         run: |
