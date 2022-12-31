@@ -9,7 +9,7 @@
 name: Snapshot X86-64 Docker Images
 
 env:
-  PREFIX_URL: https://downloads.openwrt.org/snapshots/targets
+  PREFIX_URL: https://op.supes.top/releases/targets
 
 on:
   workflow_dispatch:
