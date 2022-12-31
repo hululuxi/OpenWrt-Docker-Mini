@@ -120,16 +120,16 @@ jobs:
             s/KERNEL_VERSION/$KERNEL_VERSION/g; \
             s/DEVICE_PLATFORM/$DEVICE_PLATFORM/g" $GITHUB_WORKSPACE/data/etc/opkg/distfeeds.conf
             
-      - name: Combine feeds.conf
-        run: |
-          cd openwrt-imagebuilder-$BRANCHES-$DEVICE_TARGET-$DEVICE_SUBTARGET.Linux-x86_64
-          echo $(cat $GITHUB_WORKSPACE/config/feeds.config) >> feeds.conf.default
+      #- name: Combine feeds.conf
+      #  run: |
+      #    cd openwrt-imagebuilder-$BRANCHES-$DEVICE_TARGET-$DEVICE_SUBTARGET.Linux-x86_64
+      #    echo $(cat $GITHUB_WORKSPACE/config/feeds.config) >> feeds.conf.default
         
-      - name: Update & Install feeds
-        run: |
-          cd openwrt-imagebuilder-$BRANCHES-$DEVICE_TARGET-$DEVICE_SUBTARGET.Linux-x86_64
-          ./scripts/feeds update -a
-          ./scripts/feeds install -a
+      #- name: Update & Install feeds
+      #  run: |
+      #    cd openwrt-imagebuilder-$BRANCHES-$DEVICE_TARGET-$DEVICE_SUBTARGET.Linux-x86_64
+      #    ./scripts/feeds update -a
+      #    ./scripts/feeds install -a
 
       - name: Build Mini RootFS
         run: |
