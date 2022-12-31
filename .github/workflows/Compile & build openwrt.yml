@@ -126,8 +126,8 @@ jobs:
           echo "$GITHUB_WORKSPACE/config/feeds.config" >> ./feeds.conf.default
         
       - name: Update & Install feeds
-        working-directory: ./openwrt-imagebuilder-$BRANCHES-$DEVICE_TARGET-$DEVICE_SUBTARGET.Linux-x86_64
         run: |
+          cd openwrt-imagebuilder-$BRANCHES-$DEVICE_TARGET-$DEVICE_SUBTARGET.Linux-x86_64
           ./scripts/feeds update -a
 
       - name: Build Mini RootFS
