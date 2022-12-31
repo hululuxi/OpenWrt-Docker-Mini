@@ -37,3 +37,10 @@ rpcd-mod-luci
 rpcd-mod-rrdns
 uhttpd
 uhttpd-mod-ubus
+######################################
+luci-i18n-filetransfer-zh-cn
+luci-i18n-turboacc-zh-cn
+luci-app-advanced
+luci-app-fullconenat
+luci-i18n-adbyby-plus-zh-cn
+luci-i18n-vssr-zh-cn
