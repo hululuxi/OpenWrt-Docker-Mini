@@ -130,7 +130,6 @@ jobs:
           cd openwrt-imagebuilder-$BRANCHES-$DEVICE_TARGET-$DEVICE_SUBTARGET.Linux-x86_64
           ./scripts/feeds update -a
           ./scripts/feeds install -a
-          ./scripts/feeds install -a
 
       - name: Build Mini RootFS
         run: |
