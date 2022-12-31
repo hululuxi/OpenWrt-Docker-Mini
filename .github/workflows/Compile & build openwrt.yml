@@ -130,13 +130,6 @@ jobs:
           cd openwrt-imagebuilder-$BRANCHES-$DEVICE_TARGET-$DEVICE_SUBTARGET.Linux-x86_64
           ./scripts/feeds update -a
           ./scripts/feeds install -a
-          
-      - name: Download package
-        run: |
-          cd openwrt-imagebuilder-$BRANCHES-$DEVICE_TARGET-$DEVICE_SUBTARGET.Linux-x86_64
-          make download -j$(nproc)
-          find dl -size -1024c -exec ls -l {} \;
-          find dl -size -1024c -exec rm -f {} \;
 
       - name: Build Mini RootFS
         run: |
