@@ -128,8 +128,8 @@ jobs:
       - name: Update & Install feeds
         run: |
           cd openwrt-imagebuilder-$BRANCHES-$DEVICE_TARGET-$DEVICE_SUBTARGET.Linux-x86_64
-          ./scripts/feeds update -a
-          ./scripts/feeds install -a
+          ./scripts/feeds update -a packages luci 
+          ./scripts/feeds install -a -p packages luci
 
       - name: Build Mini RootFS
         run: |
