@@ -150,4 +150,4 @@ jobs:
           context: .
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/openwrt-mini:$BRANCHES-$DEVICE_TARGET_$DEVICE_SUBTARGET
+            ${{ secrets.DOCKERHUB_USERNAME }}/openwrt-mini:21.02_x86_64
