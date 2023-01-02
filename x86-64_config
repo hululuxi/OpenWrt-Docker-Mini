@@ -42,6 +42,7 @@ tc-mod-iptables
 uhttpd
 uhttpd-mod-ubus
 zlib
+luci-i18n-base-zh-cn
 luci-i18n-filetransfer-zh-cn
 luci-i18n-turboacc-zh-cn
 luci-app-advanced
